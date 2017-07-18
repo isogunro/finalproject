@@ -1,0 +1,36 @@
+<script>
+		$(document).ready(function() {
+			$('#tblVendor').DataTable();
+		});
+</script>
+<div style="width:950px; margin:0 auto">
+<div><a href="/admin/vendorListing">Vendors</a>&nbsp;&nbsp;&nbsp;<a href="/admin/addVendor">Add Vendor</a></div></br>
+<div>
+<table id="tblVendor" class="display" cellspacing="0" width="100%" border="1">
+<thead>
+	<tr>
+		<th style="width:10%">ACTION</th>
+		<th>Vendor Business Name</th>
+    <th>Vendor First Name</th>
+    <th>Vendor Last Name</th>
+		<th>Phone Number</th>
+		<th>Email</th>
+		<th>Description</th>
+	</tr>
+</thead>
+<tbody>
+{{#each vendors }}
+  <tr>
+		<td><a href="/admin/editVendor/{{ _id }}"><img src="/32Edit.png"></a>&nbsp;<a href="/admin/vendorListing/{{ _id }}" onclick="return confirm('Are you sure you want to delete this vendor?')"><img src="/32Delete.png"></a></td>
+		<td>{{ businessName }}</td>
+    <td>{{ firstName }}</td>
+    <td>{{ lastName }}</td>
+    <td>{{ phoneNumber }}</th>
+    <td>{{ email }} </td>
+	  <td>{{ description }} </td>
+  </tr>
+{{/each}}
+</tbody>
+</table>
+<div>
+</div>

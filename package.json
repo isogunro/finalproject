@@ -1,0 +1,36 @@
+{
+  "name": "finalproject",
+  "version": "1.0.0",
+  "description": "Your assignment for next class is to review your notes on deployment and to get started on your final project.\r The deliverables for next class are:\r - Create a new repository under your own GitHub account for your final project.\r - Clone the repository locally (NOT in to an existing repository!) and add a `readme.md` or edit the one created by GitHub\r - Add a short description of your project\r - Add a short description of your UI and the views of your application\r - Draft the technical requirements of your application, specifically the features you'll build out and how each filter will work. 3 features tends to be the sweet spot for final projects.\r - Add a link to your final project repository to the file you created in the `final-projects/` folder of the class repository listing your project ideas. Add, Commit, Push, and make a Pull Request. In the comments of the pull request (where you answer the 3 questions) paste the link to your final project again.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isogunro/finalproject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isogunro/finalproject/issues"
+  },
+  "homepage": "https://github.com/isogunro/finalproject#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "datatables.net": "^1.10.15",
+    "datatables.net-dt": "^1.10.15",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.3",
+    "handlebars": "^4.0.10",
+    "jquery": "^3.2.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.11.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0"
+  }
+}
