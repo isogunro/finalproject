@@ -8,8 +8,7 @@ const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 var User = require('./models/account')
 
-mongoose.connect('mongodb:@cluster0-shard-00-00-yng8g.mongodb.net:27017,cluster0-shard-00-01-yng8g.mongodb.net:27017,cluster0-shard-00-02-yng8g.mongodb.net:27017/vendorCollection?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin');
-
+mongoose.connect('mongodb://fleaVendors:rtmslib45#@ds163672.mlab.com:63672/projects')
 const Vendor = require('./models/vendor.js')
 
 const vendorRouter = require('./routes/vendor.js')

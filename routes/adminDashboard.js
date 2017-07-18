@@ -16,6 +16,7 @@ adminRouter.get('/', (req,res) =>{
   res.render('adminLogin')
 })
 
+
 // "localhost:3000/admin/vendors"
 adminRouter.get('/vendors', (req, res) => {
   res.render('vendorListing')
