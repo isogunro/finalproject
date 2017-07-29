@@ -1,5 +1,5 @@
 const express = require('express')
-const passport = require('passport')
+//const passport = require('passport')
 
 const Account = require('../models/account')
 
@@ -31,7 +31,7 @@ adminRouter.get('/addVendor', (req, res) => {
 })
 
 adminRouter.post('/addVendor', (req, res) => {
-  let newVendor = new Vendor({
+  const newVendor = new Vendor({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     phoneNumber: req.body.phoneNumber,
@@ -69,6 +69,7 @@ adminRouter.post('/editVendor', ( req, res ) => {
   })
 })
 
+/*
 adminRouter.get('/', function( req, res ){
   res.render('/')
 }).post('/', function( req, res ){
@@ -99,7 +100,7 @@ adminRouter.get('/logout', function( req, res ){
   req.logout()
   res.redirect('/')
 })
-
+*/
 adminRouter.get('/vendorListing', (req, res) => {
 
   Vendor.find({}, ( err, vendors ) => {
@@ -109,7 +110,7 @@ adminRouter.get('/vendorListing', (req, res) => {
 
 adminRouter.get('/vendorListing/:id', ( req, res ) => {
   Vendor.findOne({ '_id': req.params.id }, ( err, vendor ) => {
-    vendor.remove()
+    vendor.remove();
     res.redirect('/admin/vendorListing')
   })
 })
