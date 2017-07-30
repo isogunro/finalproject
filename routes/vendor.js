@@ -16,7 +16,7 @@ vendorRouter.get('/', (req,res) =>{
 })
 vendorRouter.post('/thanks', (req, res) => {
   console.log(req.body.description);
-  const newVendor = new Vendor({
+  let newVendor = new Vendor({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     phoneNumber: req.body.phoneNumber,
