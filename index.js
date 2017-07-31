@@ -11,20 +11,17 @@ var User = require('./models/account')
 mongoose.connect('mongodb://fleaVendors:rtmslib45#@ds163672.mlab.com:63672/projects')
 const Vendor = require('./models/vendor.js')
 
+//Set up Routers
+const siteRouter = require('./routes/site.js')
 const vendorRouter = require('./routes/vendor.js')
 const adminRouter = require('./routes/adminDashboard.js')
+
 //create an Express application.
 //app will become an object that will contai all the scafolding for our server
 let app = express();
 
 
 //app.use(express.static('public'))
-
-
-
-app.get('/', function( req, res ){
-	res.render('registration')
-})
 
 app.engine('handlebars', hbs({
 		defaultLayout: 'main',
@@ -58,10 +55,8 @@ app.use(express.static('public'))
 
 app.use('/vendor', vendorRouter)
 app.use('/admin', adminRouter)
+app.use('/', siteRouter)
 
-passport.use( new LocalStrategy(User.authenticate() ))
-passport.serializeUser(User.serializeUser())
-passport.deserializeUser(User.deserializeUser())
 
 app.listen(3000, ()=>{
   console.log("Server Listening");
