@@ -1,3 +1,4 @@
+//https://www.youtube.com/watch?v=iX8UhDOmkPE (Authentication Video)
 //import the express module
 const express = require('express');
 const mongoose = require('mongoose');
@@ -21,7 +22,7 @@ const adminRouter = require('./routes/adminDashboard.js')
 let app = express();
 
 
-//app.use(express.static('public'))
+app.use(express.static('./public'))
 
 app.engine('handlebars', hbs({
 		defaultLayout: 'main',
