@@ -7,7 +7,7 @@ h2 {
   width: 50%;
   padding: 10px;
   text-align: center;
-  margin-top: 60px
+  /*margin-top: 60px*/
 }
 .text {
   margin-top:15px;
@@ -172,7 +172,8 @@ Last change	: 2015/03/27
 html,
 body {
   background: #efefef;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-family: 'Varela Round';
 }
 /*=== 2. Anchor Link ===*/
@@ -460,3 +461,9 @@ Follow me on Twitter @maridlcrmn
 
 .btn.btn-circle { border-radius: 50px; }
 .btn.btn-outline { background-color: transparent; }
+
+/*overwite flex direction from bootstrap*/
+.navbar-nav {
+    flex-direction: row!important;
+}
+/*--------------------*/
